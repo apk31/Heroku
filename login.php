@@ -1,9 +1,50 @@
+<!--<html>
+    <head>
+        <style>
+           body{
+            background-color: antiquewhite;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .listnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+          }
+          
+        .isilist{
+            float: left;
+          }
+          
+        .isilist a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          
+        .isilist a:hover {
+            background-color: #111;
+          }
+        
+        .tbbundar{
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: grey;
+            color: white;
+        }
+        .bulat{border-radius: 130px;background-color: orangered;padding: 5px;text-decoration: none;border: 0px;width: 200px;color: white;}
+        </style><link rel="style" href="style/tukel.css">
+    </head>-->
 <html>
 
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <title>MyShop</title>
+  <title>MyShop Login</title>
   <link rel="icon" type="image/png" sizes="32x32" href="pic/favicon-32x32.png">
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <style>
     body {
       background-color: white;
@@ -14,7 +55,6 @@
     td {
       text-align: center;
       padding: 5px;
-      width: 25%;
     }
 
     .listnav {
@@ -44,10 +84,6 @@
     .dropdown:hover .dropbtn {
       box-shadow: 0 5px gray;
       transition-duration: 0.3s;
-    }
-
-    .home {
-      box-shadow: 0 5px gray;
     }
 
     .isi2 {
@@ -194,10 +230,8 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       transition: 0.3s;
       width: 40%;
-
       border-radius: 15px;
-      margin: auto;
-      padding: 40px;
+      padding: 25px;
     }
 
     .card:hover {
@@ -213,6 +247,7 @@
       color: black;
     }
   </style>
+
   <!--<link rel="style" href="style/tukel.css">-->
 </head>
 
@@ -220,7 +255,7 @@
   <div style="padding: 20px;">
     <ul class="listnav" style="padding: 20px;">
       <a href="index.php"><img src="pic\logo-min.png" alt="" width="60px" align=left style="padding-left: 30px;"></a>
-      <li class="isilist" style="padding-left: 50px;"><a class="home" href="/index.php">Home</a></li>
+      <li class="isilist" style="padding-left: 50px;"><a href="index.php">Home</a></li>
       <li class="isilist">
         <div class="dropdown"><a class="dropbtn" href="produk.php">Product</a>
           <div class="dr-content"><a href="movie.php">Movie</a><a href="music.php">Music</a><a
@@ -235,100 +270,45 @@
       <li class="isi2"><a class="bunder btn1" href="login.php">Login</a></li>
     </ul>
   </div>
-  <div class="col pad" style="height:300px">
-    <div style="height: 250px;">
-      <h1 style="padding-left: 50px;">Get all your premium needs <br>at affordable price</h1>
-      <p style="font-size: 18px;padding-left: 50px;">Grab it now before the discounts end.</p><br>
-      <div style="padding-left: 80px"><a class="bunder" href="produk.php"
-          style="padding-left: 20px;padding-right: 20px;">Product</a><a
-          style="margin-left: 30px;padding-left: 20px;padding-right: 20px;" class="bunder" href="/login.php">Login</a>
-      </div>
+  <div class="card" style="margin: auto;background-color: rgb(248, 248, 248);">
+    <div align="center" style="height: 20%;">
+      <table class="tbbundar" style="padding: 10px;">
+        <form id="form" action="#">
+          <tr style="padding: 10px;">
+            <td><label for="uname">Username / Email</label></td>
+            <td style="width: fit-content;">:</td>
+            <td><input type="text" name="uname" id="uname" size="25" required="required"></td>
+          </tr>
+          <tr style="padding: 10px;">
+            <td><label for="pwd">Password</label></td>
+            <td style="width: fit-content;">:</td>
+            <td><input type="password" name="pwd" id="pwd" size="25" required="required"></td>
+          </tr>
+          <tr style="padding: 10px;" align="right">
+            <td colspan=3><button onclick=getset() type="submit" class="bunder">Login</button></td>
+          </tr>
+        </form>
+        <td colspan=3>Belum punya akun? <a href="register.php">Daftar disini</a> </td>
+      </table>
     </div>
-    <div id="fader"><img src="pic/d1.png" alt="Produk" id="a" height="150px" style="opacity: 0;"></div>
   </div>
-  <div style="padding: 50px;background-color: whitesmoke;">
-    <table width=100% style="table-layout:fixed;">
-      <tr>
-        <td><img class="fot" src="pic/clock.png" width="100px" alt="Fast"></td>
-        <td><img class="fot" src="pic/offer.png" width="100px"></td>
-        <td><img class="fot" src="pic/guarantee.png" width="100px"></td>
-      </tr>
-      <tr>
-        <td>
-          <h2>Fast</h2>
-        </td>
-        <td>
-          <h2>Affordable</h2>
-        </td>
-        <td>
-          <h2>Guaranteed</h2>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Respon admin <b style="color:rgb(255, 46, 46);"> PALING CEPAT </b> dan waktu proses akun yang <b
-              style="color:rgb(255, 46, 46);">SUPER SINGKAT</b>* </p>
-        </td>
-        <td>
-          <p>Harga <b style="color:rgb(255, 46, 46);">DIJAMIN TERMURAH </b> setiap hari bagi pelanggan</p>
-        </td>
-        <td>Garansi akun <b style="color:rgb(255, 46, 46);">RESMI</b> dan proses klaim <B
-            style="color:rgb(255, 46, 46);">TERMUDAH</B> </td>
-      </tr>
-    </table>
-  </div>
-  <div style="padding: 50px;">
-    <h1 align=center>Our Favourite Products</h1>
-    <table style="table-layout: fixed;">
-      <tr>
-        <td><a class="atxt" href="netflix.php">
-            <div class="card">
-              <img src="pic/d1.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>Netflix</b></h4>
-                <p>Layanan Video Streaming</p>
-              </div>
-            </div>
-          </a></td>
-        <td><a class="atxt" href="spotify.php">
-            <div class="card">
-              <img src="pic/d2.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>Spotify</b></h4>
-                <p>Layanan Musik Streaming</p>
-              </div>
-            </div>
-          </a></td>
-        <td><a class="atxt" href="disney.php">
-            <div class="card">
-              <img src="pic/d3.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>Disney+ Hotstar</b></h4>
-                <p>Layanan Video Streaming</p>
-              </div>
-            </div>
-          </a></td>
-        <td><a class="atxt" href="viu.php">
-            <div class="card">
-              <img src="pic/d4.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>VIU</b></h4>
-                <p>Layanan Video Streaming</p>
-              </div>
-            </div>
-          </a></td>
-      </tr>
-    </table>
-  </div>
-  <!--<div><h1 align=center>Our Satisfied Costumers</h1>
-        
-        </div>-->
   <div>
-    <footer>
-      <p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
-    </footer>
+    <script>
+      function getset(){
+        var r="";
+        var uname=document.getElementById("uname").value;
+        var pwd=document.getElementById("pwd").value;
+        if (document.getElementById("uname").value=="" | document.getElementById("pwd").value=="") {
+          alert("Please don't leave input empty");
+        }else{
+          alert("Coming soon...");
+          document.getElementById("form").action="#";
+        }
+      }
+    </script>
+    <br><br>
+    <p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
   </div>
-  <!--<div align=center><iframe frameBorder="0" width="60%" height="100%" src="https://docs.google.com/document/d/e/2PACX-1vRjOrCkUB17yv08jsKC0auai6xRKHEbUU3hFW78zNJKip3tGeXgYGf_rEngzRTiR6olHWVz3fXEnWjF/pub?embedded=true"></iframe></div>-->
 </body>
 
 </html>

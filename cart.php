@@ -1,9 +1,9 @@
 <html>
 
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <title>MyShop</title>
+  <title>MyShop Checkout</title>
   <link rel="icon" type="image/png" sizes="32x32" href="pic/favicon-32x32.png">
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <style>
     body {
       background-color: white;
@@ -13,8 +13,9 @@
 
     td {
       text-align: center;
-      padding: 5px;
-      width: 25%;
+      padding: 15px;
+      width: 20%;
+      border-bottom: 1px solid black;
     }
 
     .listnav {
@@ -86,13 +87,30 @@
       transition-duration: 0.3s;
     }
 
+    .bunder2 {
+      border-radius: 30px;
+      background-color: rgb(134, 238, 120);
+      padding: 15px;
+      text-decoration: none;
+      border: 0px;
+      width: 100px;
+      color: black;
+      font-size: 14px;
+    }
+
+    .bunder2:hover {
+      background-color: rgb(77, 197, 83);
+      color: honeydew;
+      transition-duration: 0.3s;
+    }
+
     .pad {
       padding: 30px;
     }
 
     .col {
       column-count: 2;
-      height: 300px;
+      height: auto;
     }
 
     @keyframes fade {
@@ -195,9 +213,13 @@
       transition: 0.3s;
       width: 40%;
 
-      border-radius: 15px;
+      border-radius: 12px;
       margin: auto;
-      padding: 40px;
+      padding-top: 1px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 20px;
+      background-color: rgb(245, 245, 245);
     }
 
     .card:hover {
@@ -206,6 +228,12 @@
 
     .gbrad {
       border-radius: 15px 15px 0 0;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      opacity: 1;
+      margin: 0;
     }
 
     .atxt {
@@ -220,7 +248,7 @@
   <div style="padding: 20px;">
     <ul class="listnav" style="padding: 20px;">
       <a href="index.php"><img src="pic\logo-min.png" alt="" width="60px" align=left style="padding-left: 30px;"></a>
-      <li class="isilist" style="padding-left: 50px;"><a class="home" href="/index.php">Home</a></li>
+      <li class="isilist" style="padding-left: 50px;"><a href="index.php">Home</a></li>
       <li class="isilist">
         <div class="dropdown"><a class="dropbtn" href="produk.php">Product</a>
           <div class="dr-content"><a href="movie.php">Movie</a><a href="music.php">Music</a><a
@@ -235,100 +263,73 @@
       <li class="isi2"><a class="bunder btn1" href="login.php">Login</a></li>
     </ul>
   </div>
-  <div class="col pad" style="height:300px">
-    <div style="height: 250px;">
-      <h1 style="padding-left: 50px;">Get all your premium needs <br>at affordable price</h1>
-      <p style="font-size: 18px;padding-left: 50px;">Grab it now before the discounts end.</p><br>
-      <div style="padding-left: 80px"><a class="bunder" href="produk.php"
-          style="padding-left: 20px;padding-right: 20px;">Product</a><a
-          style="margin-left: 30px;padding-left: 20px;padding-right: 20px;" class="bunder" href="/login.php">Login</a>
+  <h2 style="padding-left: 100px;">Shopping Cart</h2>
+  <div style="padding-left: 100px;" class="col">
+    <div>
+      <table style="border-top: 1px solid black;table-layout: fixed;border-collapse: collapse;">
+        <tr>
+          <td colspan="2" style="text-align: left;padding-left: 40px;"><b>Nama Produk</b></td>
+          <td><b>Jumlah</b></td>
+          <td><b>Harga</b></td>
+          <td><b>Total</b></td>
+        </tr>
+        <tr>
+          <td><img src="pic/d1.png" width="120px"></td>
+          <td> <b>Netflix Sharing 1 Bulan</b> </td>
+          <td><input type="number"
+              style="width: 70%;border: 1px solid rgb(202, 202, 202);border-radius: 3px;padding: 5px; " placeholder="1"
+              value="1" min="0"></td>
+          <td>Rp. 40000</td>
+          <td id="total">Rp. 40000</td>
+        </tr>
+      </table>
+    </div>
+    <div class="card" style="margin-top: 220px;">
+      <h2>Order Summary</h2>
+      <div class="container">
+        <table>
+          <tr>
+            <td style="border:0px;text-align: left;padding: 0;">
+              <h4><b id="summary">1 Item(s)</b></h4>
+            </td>
+            <td style="border:0px;text-align: right;padding: 0;">
+              <h4>Rp. 40000</h4>
+            </td>
+          </tr>
+          <tr>
+            <td style="border:0px;text-align: right;padding: 0;width: 45%; text-align: left;">
+              <h4>Promo Code :</h4>
+            </td>
+            <td style="border:0px;text-align: right;padding: 0;padding-bottom: 18px;width: 55%;"><input
+                style="width: 100%;border: 1px solid rgb(202, 202, 202);border-radius: 3px;padding: 3px;" type="text"
+                placeholder="MERDEKANONTON" id="coup"></td>
+          </tr>
+          <tr>
+            <td style="text-align: left;padding: 0;padding-bottom: 15px;border-collapse:collapse;" colspan="2"><button
+                class="bunder">Apply</button></td>
+          </tr>
+          <tr>
+            <td style="border:0px;text-align: right;padding: 0;padding-top: 15px;width: 33%; text-align: left;">
+              <h4>Total Biaya</h4>
+            </td>
+            <td style="border:0px;text-align: right;padding: 0;padding-top: 15px;width: 50%;">
+              <h4 id="total2">Rp. 40000</h4>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"
+              style="border:0;text-align: right;padding: 0;padding-top: 15px;padding-bottom: 15px;border-collapse:collapse;"
+              colspan="2"><a class="bunder2"
+                href="https://api.whatsapp.com/send/?phone=%2B6282331558378&text=Berikut+bukti+pembayaran+untuk+order+Netflix%2C+Terima+kasih.">Checkout</a>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
-    <div id="fader"><img src="pic/d1.png" alt="Produk" id="a" height="150px" style="opacity: 0;"></div>
   </div>
-  <div style="padding: 50px;background-color: whitesmoke;">
-    <table width=100% style="table-layout:fixed;">
-      <tr>
-        <td><img class="fot" src="pic/clock.png" width="100px" alt="Fast"></td>
-        <td><img class="fot" src="pic/offer.png" width="100px"></td>
-        <td><img class="fot" src="pic/guarantee.png" width="100px"></td>
-      </tr>
-      <tr>
-        <td>
-          <h2>Fast</h2>
-        </td>
-        <td>
-          <h2>Affordable</h2>
-        </td>
-        <td>
-          <h2>Guaranteed</h2>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Respon admin <b style="color:rgb(255, 46, 46);"> PALING CEPAT </b> dan waktu proses akun yang <b
-              style="color:rgb(255, 46, 46);">SUPER SINGKAT</b>* </p>
-        </td>
-        <td>
-          <p>Harga <b style="color:rgb(255, 46, 46);">DIJAMIN TERMURAH </b> setiap hari bagi pelanggan</p>
-        </td>
-        <td>Garansi akun <b style="color:rgb(255, 46, 46);">RESMI</b> dan proses klaim <B
-            style="color:rgb(255, 46, 46);">TERMUDAH</B> </td>
-      </tr>
-    </table>
-  </div>
-  <div style="padding: 50px;">
-    <h1 align=center>Our Favourite Products</h1>
-    <table style="table-layout: fixed;">
-      <tr>
-        <td><a class="atxt" href="netflix.php">
-            <div class="card">
-              <img src="pic/d1.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>Netflix</b></h4>
-                <p>Layanan Video Streaming</p>
-              </div>
-            </div>
-          </a></td>
-        <td><a class="atxt" href="spotify.php">
-            <div class="card">
-              <img src="pic/d2.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>Spotify</b></h4>
-                <p>Layanan Musik Streaming</p>
-              </div>
-            </div>
-          </a></td>
-        <td><a class="atxt" href="disney.php">
-            <div class="card">
-              <img src="pic/d3.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>Disney+ Hotstar</b></h4>
-                <p>Layanan Video Streaming</p>
-              </div>
-            </div>
-          </a></td>
-        <td><a class="atxt" href="viu.php">
-            <div class="card">
-              <img src="pic/d4.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>VIU</b></h4>
-                <p>Layanan Video Streaming</p>
-              </div>
-            </div>
-          </a></td>
-      </tr>
-    </table>
-  </div>
-  <!--<div><h1 align=center>Our Satisfied Costumers</h1>
-        
-        </div>-->
   <div>
     <footer>
       <p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
     </footer>
   </div>
-  <!--<div align=center><iframe frameBorder="0" width="60%" height="100%" src="https://docs.google.com/document/d/e/2PACX-1vRjOrCkUB17yv08jsKC0auai6xRKHEbUU3hFW78zNJKip3tGeXgYGf_rEngzRTiR6olHWVz3fXEnWjF/pub?embedded=true"></iframe></div>-->
 </body>
-
-</html>
