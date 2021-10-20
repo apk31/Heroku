@@ -1,0 +1,63 @@
+.pad {
+    padding: 10px;
+}
+
+.ts {
+    font-size: 20px;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding: 0.8rem 1.6rem;
+}
+
+.nav-item a:hover {
+    box-shadow: 0 4px gray;
+    transition-duration: 0.3s;
+}
+
+.cart {
+    opacity: 0.5;
+}
+
+.cart:hover {
+    opacity: 1;
+    transition-duration: 0.25s;
+}
+
+.bunder {
+    color: black !important;
+    text-align: center;
+    border-radius: 30px;
+    background-color: lightgray;
+    text-decoration: none;
+    border: 0px;
+    width: 120px;
+    padding: 10px !important;
+}
+
+.bunder:hover {
+    text-decoration: none;
+    background-color: rgb(173, 173, 173);
+    color: rgb(236, 236, 236) !important;
+    transition-duration: 0.3s;
+}
+
+.home {
+    box-shadow: 0 4px gray;
+}
+
+.produk {
+    box-shadow: 0 4px gray;
+}
+
+.about {
+    box-shadow: 0 4px gray;
+}
+
+.news {
+    box-shadow: 0 4px gray;
+}
+
+.review {
+    box-shadow: 0 4px gray;
+}

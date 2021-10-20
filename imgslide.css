@@ -1,0 +1,49 @@
+@keyframes fade {
+    0% {
+        background-image: url("pic/d1.png");
+        background-size: 500px 150px;
+        background-repeat: no-repeat;
+    }
+    16.67% {
+        background-image: url("pic/d2.png");
+        ;
+        background-size: 500px 150px;
+        background-repeat: no-repeat;
+    }
+    33.34% {
+        background-image: url("pic/d3.png");
+        ;
+        background-size: 500px 150px;
+        background-repeat: no-repeat;
+    }
+    50.01% {
+        background-image: url("pic/d4.png");
+        ;
+        background-size: 500px 150px;
+        background-repeat: no-repeat;
+    }
+    66.68% {
+        background-image: url("pic/d5.png");
+        ;
+        background-size: 500px 150px;
+        background-repeat: no-repeat;
+    }
+    83.35% {
+        background-image: url("pic/d6.png");
+        ;
+        background-size: 500px 150px;
+        background-repeat: no-repeat;
+    }
+    100% {
+        background-image: url("pic/d1.png");
+        ;
+        background-size: 500px 150px;
+        background-repeat: no-repeat;
+    }
+}
+
+#fader {
+    max-height: 150px;
+    max-width: 100%;
+    animation: fade 20s cubic-bezier(.42, 0, .58, 1) infinite;
+}
