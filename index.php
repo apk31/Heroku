@@ -227,35 +227,35 @@
 <body style="font-weight: normal;">
     <nav class="navbar navbar-expand-sm navbar-light " style="padding: 15px 50px;background-color: rgb(255,255,255);font-size: 17px;">
         <!-- Brand/logo -->
-        <a class="navbar-brand " href="kkstrap.html" style="padding-right: 40px;">
+        <a class="navbar-brand " href="index.php" style="padding-right: 40px;">
             <img src="pic/logo-min.png" alt="logo" style="width:60px;">
         </a>
 
         <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-body home" href="kkstrap.html">Home</a>
+                <a class="nav-link text-body home" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-body " href="produkstrap.html">Product</a>
+                <a class="nav-link text-body " href="produk.php">Product</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-body" href="produkstrap.html">Review</a>
+                <a class="nav-link text-body" href="review.php">Review</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-body" href="produkstrap.html">About</a>
+                <a class="nav-link text-body" href="comingsoon.php">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-body" href="produkstrap.html">News</a>
+                <a class="nav-link text-body" href="NEWS.php">News</a>
             </li>
         </ul>
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-body bunder " href="loginstrap.html" style="box-shadow: none;margin-top: 7px;">Login</a>
+                    <a class="nav-link text-body bunder " href="login.php" style="box-shadow: none;margin-top: 7px;">Login</a>
                 </li>
                 <li class=nav-item>
-                    <a class="nav-link" href="#" style="box-shadow: none;"><img src="pic/cart.png" class="cart" style="width: 33px;"></a>
+                    <a class="nav-link" href="cart.php" style="box-shadow: none;"><img src="pic/cart.png" class="cart" style="width: 33px;"></a>
                 </li>
             </ul>
         </div>
@@ -266,8 +266,8 @@
                 <h2 style="margin-bottom: 15px;">Get all your premium needs <br> at affordable price</h2>
                 <p class="ts">Grab it now before the discounts end.</p>
                 <div style="padding-left: 35px;padding-top: 5px;">
-                    <a class="bunder" href="produk.html" style="padding: 10px 25px !important;">Product</a>
-                    <a style="margin-left: 1rem;padding: 10px 25px !important;" class="bunder" href="/login.html">Login</a>
+                    <a class="bunder" href="produk.php" style="padding: 10px 25px !important;">Product</a>
+                    <a style="margin-left: 1rem;padding: 10px 25px !important;" class="bunder" href="login.php">Login</a>
                 </div>
             </div>
         </div>
@@ -309,7 +309,7 @@
         <h2 align=center>Our Favourite Products</h2><br>
         <div class="row">
             <div class="col-sm">
-                <a href="produkstrap.html" style="text-decoration: none;color: black;">
+                <a href="netflix.php" style="text-decoration: none;color: black;">
                     <div class="card">
                         <div class="card-body"><img src="pic/d1.png" alt="Avatar" class="img-cards">
                             <div>
@@ -321,7 +321,7 @@
                 </a>
             </div>
             <div class="col-sm">
-                <a href="produkstrap.html" style="text-decoration: none;color: black;">
+                <a href="viu.php" style="text-decoration: none;color: black;">
                     <div class="card">
                         <div class="card-body"><img src="pic/d4.png" alt="Avatar" class="img-cards">
                             <div>
@@ -333,7 +333,7 @@
                 </a>
             </div>
             <div class="col-sm">
-                <a href="produkstrap.html" style="text-decoration: none;color: black;">
+                <a href="spotify.php" style="text-decoration: none;color: black;">
                     <div class="card">
                         <div class="card-body"><img src="pic/d2.png" alt="Avatar" class="img-cards">
                             <div>
@@ -345,7 +345,7 @@
                 </a>
             </div>
             <div class="col-sm">
-                <a href="produkstrap.html" style="text-decoration: none;color: black;">
+                <a href="disney.php" style="text-decoration: none;color: black;">
                     <div class="card">
                         <div class="card-body"><img src="pic/d3.png" alt="Avatar" class="img-cards">
                             <div>
