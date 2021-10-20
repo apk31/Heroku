@@ -4,9 +4,14 @@
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <title>MyShop</title>
   <link rel="icon" type="image/png" sizes="32x32" href="pic/favicon-32x32.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="imgslide.css">
+  <link rel="stylesheet" href="card.css">
   <!--<style>
     body {
       background-color: white;
@@ -219,119 +224,144 @@
   <!--<link rel="style" href="style/tukel.css">-->
 </head>
 
-<body>
-  <div style="padding: 20px;">
-    <ul class="listnav" style="padding: 20px;">
-      <a href="index.php"><img src="pic\logo-min.png" alt="" width="60px" align=left style="padding-left: 30px;"></a>
-      <li class="isilist" style="padding-left: 50px;"><a class="home" href="/index.php">Home</a></li>
-      <li class="isilist">
-        <div class="dropdown"><a class="dropbtn" href="produk.php">Product</a>
-          <div class="dr-content"><a href="movie.php">Movie</a><a href="music.php">Music</a><a
-              href="comingsoon.php">Other</a></div>
+<body style="font-weight: normal;">
+    <nav class="navbar navbar-expand-sm navbar-light " style="padding: 15px 50px;background-color: rgb(255,255,255);font-size: 17px;">
+        <!-- Brand/logo -->
+        <a class="navbar-brand " href="kkstrap.html" style="padding-right: 40px;">
+            <img src="pic/logo-min.png" alt="logo" style="width:60px;">
+        </a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-body home" href="kkstrap.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-body " href="produkstrap.html">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-body" href="produkstrap.html">Review</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-body" href="produkstrap.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-body" href="produkstrap.html">News</a>
+            </li>
+        </ul>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-body bunder " href="loginstrap.html" style="box-shadow: none;margin-top: 7px;">Login</a>
+                </li>
+                <li class=nav-item>
+                    <a class="nav-link" href="#" style="box-shadow: none;"><img src="pic/cart.png" class="cart" style="width: 33px;"></a>
+                </li>
+            </ul>
         </div>
-      </li>
-      <li class="isilist"><a href="review.php">Review</a></li>
-      <li class="isilist"><a href="comingsoon.php">About</a></li>
-      <li class="isilist"><a href="NEWS.php">News</a></li>
-      <li class="isi2" style="padding:10;"><a href="cart.php"><img class="fot" src="pic/cart.png" width="30px"></a>
-      </li>
-      <li class="isi2"><a class="bunder btn1" href="login.php">Login</a></li>
-    </ul>
-  </div>
-  <div class="col pad" style="height:300px">
-    <div style="height: 250px;">
-      <h1 style="padding-left: 50px;">Get all your premium needs <br>at affordable price</h1>
-      <p style="font-size: 18px;padding-left: 50px;">Grab it now before the discounts end.</p><br>
-      <div style="padding-left: 80px"><a class="bunder" href="produk.php"
-          style="padding-left: 20px;padding-right: 20px;">Product</a><a
-          style="margin-left: 30px;padding-left: 20px;padding-right: 20px;" class="bunder" href="/login.php">Login</a>
-      </div>
+    </nav>
+    <div class="row" style="padding: 90px 60px !important;margin:0;">
+        <div class="col-sm-6">
+            <div class="container">
+                <h2 style="margin-bottom: 15px;">Get all your premium needs <br> at affordable price</h2>
+                <p class="ts">Grab it now before the discounts end.</p>
+                <div style="padding-left: 35px;padding-top: 5px;">
+                    <a class="bunder" href="produk.html" style="padding: 10px 25px !important;">Product</a>
+                    <a style="margin-left: 1rem;padding: 10px 25px !important;" class="bunder" href="/login.html">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div id="fader"><img src="pic/d1.png" alt="Produk" id="a" height="150px" style="opacity: 0;"></div>
+        </div>
     </div>
-    <div id="fader"><img src="pic/d1.png" alt="Produk" id="a" height="150px" style="opacity: 0;"></div>
-  </div>
-  <div style="padding: 50px;background-color: whitesmoke;">
-    <table width=100% style="table-layout:fixed;">
-      <tr>
-        <td><img class="fot" src="pic/clock.png" width="100px" alt="Fast"></td>
-        <td><img class="fot" src="pic/offer.png" width="100px"></td>
-        <td><img class="fot" src="pic/guarantee.png" width="100px"></td>
-      </tr>
-      <tr>
-        <td>
-          <h2>Fast</h2>
-        </td>
-        <td>
-          <h2>Affordable</h2>
-        </td>
-        <td>
-          <h2>Guaranteed</h2>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Respon admin <b style="color:rgb(255, 46, 46);"> PALING CEPAT </b> dan waktu proses akun yang <b
-              style="color:rgb(255, 46, 46);">SUPER SINGKAT</b>* </p>
-        </td>
-        <td>
-          <p>Harga <b style="color:rgb(255, 46, 46);">DIJAMIN TERMURAH </b> setiap hari bagi pelanggan</p>
-        </td>
-        <td>Garansi akun <b style="color:rgb(255, 46, 46);">RESMI</b> dan proses klaim <B
-            style="color:rgb(255, 46, 46);">TERMUDAH</B> </td>
-      </tr>
-    </table>
-  </div>
-  <div style="padding: 50px;">
-    <h1 align=center>Our Favourite Products</h1>
-    <table style="table-layout: fixed;">
-      <tr>
-        <td><a class="atxt" href="netflix.php">
-            <div class="card">
-              <img src="pic/d1.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>Netflix</b></h4>
-                <p>Layanan Video Streaming</p>
-              </div>
+    <div class="jumbotron jumbotron-fluid" style="padding: 4rem 40px;background-color: rgb(241, 241, 241);">
+        <table width=100% style="table-layout:fixed;text-align: center;">
+            <tr>
+                <td><img class="cart" src="pic/clock.png" width="100px" alt="Fast"></td>
+                <td><img class="cart" src="pic/offer.png" width="100px"></td>
+                <td><img class="cart" src="pic/guarantee.png" width="100px"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Fast</h2>
+                </td>
+                <td>
+                    <h2>Affordable</h2>
+                </td>
+                <td>
+                    <h2>Guaranteed</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Respon admin <b style="color:rgb(255, 46, 46);"> PALING CEPAT </b> dan waktu proses akun yang <b style="color:rgb(255, 46, 46);">SUPER SINGKAT</b>* </p>
+                </td>
+                <td>
+                    <p>Harga <b style="color:rgb(255, 46, 46);">DIJAMIN TERMURAH </b> setiap hari bagi pelanggan</p>
+                </td>
+                <td>Garansi akun <b style="color:rgb(255, 46, 46);">RESMI</b> dan proses klaim
+                    <B style="color:rgb(255, 46, 46);">TERMUDAH</B> </td>
+            </tr>
+        </table>
+    </div>
+    <div class="container text-center">
+        <h2 align=center>Our Favourite Products</h2><br>
+        <div class="row">
+            <div class="col-sm">
+                <a href="produkstrap.html" style="text-decoration: none;color: black;">
+                    <div class="card">
+                        <div class="card-body"><img src="pic/d1.png" alt="Avatar" class="img-cards">
+                            <div>
+                                <h4 class="pad">Netflix</h4>
+                                <p>Layanan Video Streaming</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </a></td>
-        <td><a class="atxt" href="spotify.php">
-            <div class="card">
-              <img src="pic/d2.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>Spotify</b></h4>
-                <p>Layanan Musik Streaming</p>
-              </div>
+            <div class="col-sm">
+                <a href="produkstrap.html" style="text-decoration: none;color: black;">
+                    <div class="card">
+                        <div class="card-body"><img src="pic/d4.png" alt="Avatar" class="img-cards">
+                            <div>
+                                <h4 style="padding: 5px;">VIU</h4>
+                                <p>Layanan Video Streaming</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </a></td>
-        <td><a class="atxt" href="disney.php">
-            <div class="card">
-              <img src="pic/d3.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>Disney+ Hotstar</b></h4>
-                <p>Layanan Video Streaming</p>
-              </div>
+            <div class="col-sm">
+                <a href="produkstrap.html" style="text-decoration: none;color: black;">
+                    <div class="card">
+                        <div class="card-body"><img src="pic/d2.png" alt="Avatar" class="img-cards">
+                            <div>
+                                <h4 class="pad">Spotify</h4>
+                                <p>Layanan Musik Streaming</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </a></td>
-        <td><a class="atxt" href="viu.php">
-            <div class="card">
-              <img src="pic/d4.png" alt="Avatar" style="width:100%;">
-              <div class="container">
-                <h4><b>VIU</b></h4>
-                <p>Layanan Video Streaming</p>
-              </div>
+            <div class="col-sm">
+                <a href="produkstrap.html" style="text-decoration: none;color: black;">
+                    <div class="card">
+                        <div class="card-body"><img src="pic/d3.png" alt="Avatar" class="img-cards">
+                            <div>
+                                <h4 class="pad">Disney+ Hotstar</h4>
+                                <p>Layanan Video Streaming</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </a></td>
-      </tr>
-    </table>
-  </div>
-  <!--<div><h1 align=center>Our Satisfied Costumers</h1>
-        
-        </div>-->
-  <div>
-    <footer>
-      <p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
+        </div>
+    </div>
+    <footer class="text-center" style="padding-top: 40px;">
+        <p>&copy Copyright 2021 by Penguin Berjalan</p>
     </footer>
-  </div>
-  <!--<div align=center><iframe frameBorder="0" width="60%" height="100%" src="https://docs.google.com/document/d/e/2PACX-1vRjOrCkUB17yv08jsKC0auai6xRKHEbUU3hFW78zNJKip3tGeXgYGf_rEngzRTiR6olHWVz3fXEnWjF/pub?embedded=true"></iframe></div>-->
 </body>
+
 
 </html>
